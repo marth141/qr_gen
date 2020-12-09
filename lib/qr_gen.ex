@@ -26,7 +26,7 @@ defmodule QrGen do
 
   """
   @spec create_labels_for(binary, integer, integer) :: {:ok, [any]}
-  def create_labels_for(label, min \\ 0, max \\ 100) do
+  def create_labels_for(label \\ "EXAMPLE-", min \\ 0, max \\ 100) do
     images =
       Enum.map(min..max, fn n ->
         %{
